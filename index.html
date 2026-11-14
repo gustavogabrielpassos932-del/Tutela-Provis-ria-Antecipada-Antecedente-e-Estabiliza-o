@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material de Estudo — Tutela Antecipada Antecedente e Estabilização (STJ/CPC)</title>
+  <style>
+    :root {
+      --primary: #60a5fa;
+      --primary-light: #3b82f6;
+      --primary-subtle: rgba(59, 130, 246, 0.14);
+      --secondary: #f1f5f9;
+      --accent: #f59e0b;
+      --bg: #09090b;
+      --card-bg: #111114;
+      --surface-alt: #18181b;
+      --border: #27272a;
+      --text: #e4e4e7;
+      --text-muted: #a1a1aa;
+      --success: #4ade80;
+      --success-bg: rgba(34, 197, 94, 0.12);
+      --danger: #f87171;
+      --danger-bg: rgba(239, 68, 68, 0.12);
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #09090b 100%);
+      color: #ffffff;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    header h1 {
+      font-size: 2.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      color: #f8fafc;
+    }
+
+    header p {
+      font-size: 1.02rem;
+      color: #94a3b8;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .badge-container {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    .container {
+      max-width: 1020px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    nav.toc {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    nav.toc h2 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav.toc ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 0.45rem;
+    }
+
+    nav.toc a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.92rem;
+      display: block;
+      padding: 0.35rem 0.6rem;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    nav.toc a:hover {
+      background: var(--primary-subtle);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    section.topic-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    }
+
+    section.topic-card h2 {
+      font-size: 1.45rem;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section.topic-card h3 {
+      font-size: 1.15rem;
+      color: var(--secondary);
+      margin: 1.25rem 0 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+
+    th {
+      background-color: var(--surface-alt);
+      color: var(--secondary);
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      border-bottom: 2px solid var(--border);
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    blockquote.lei-seca {
+      border-left: 4px solid var(--primary);
+      background-color: var(--surface-alt);
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.15rem 0;
+      font-size: 0.93rem;
+      color: #d4d4d8;
+    }
+
+    blockquote.lei-seca .lei-header {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.45rem;
+      display: block;
+    }
+
+    .callout {
+      border-left: 4px solid var(--primary-light);
+      background-color: var(--primary-subtle);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+    }
+
+    .callout-warning {
+      border-left-color: var(--accent);
+      background-color: rgba(245, 158, 11, 0.1);
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--secondary);
+      margin-bottom: 0.35rem;
+    }
+
+    .code-term {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: #27272a;
+      color: #93c5fd;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.88em;
+      font-weight: 600;
+    }
+
+    /* Fluxo visual */
+    .flow-box {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    .flow-step {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.65rem;
+      font-size: 0.92rem;
+    }
+
+    .flow-step.branch-a {
+      border-left-color: var(--success);
+    }
+
+    .flow-step.branch-b {
+      border-left-color: var(--accent);
+    }
+
+    /* Questões Interativas */
+    .quiz-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: var(--surface-alt);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .score-board {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.98rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: #3f3f46;
+    }
+
+    .btn-secondary:hover {
+      background: #52525b;
+    }
+
+    .question-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      background: var(--surface-alt);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .question-card:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      border-color: #3f3f46;
+    }
+
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.94rem;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .q-tag {
+      font-size: 0.78rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: var(--primary-subtle);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .question-text {
+      margin-bottom: 1rem;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #f4f4f5;
+    }
+
+    .options {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .options li {
+      padding: 0.55rem 0.85rem;
+      border-radius: 6px;
+      margin-bottom: 0.45rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-size: 0.92rem;
+      color: var(--text);
+      transition: all 0.15s ease;
+    }
+
+    .options li:hover {
+      background: #27272a;
+    }
+
+    .options li.correct-opt {
+      border-color: var(--success);
+      background: var(--success-bg);
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    .options li.wrong-opt {
+      border-color: var(--danger);
+      background: var(--danger-bg);
+      color: var(--danger);
+    }
+
+    .answer-box {
+      display: none;
+      margin-top: 0.85rem;
+      padding: 0.9rem 1.05rem;
+      background-color: var(--success-bg);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #e4e4e7;
+    }
+
+    .answer-box.visible {
+      display: block;
+    }
+
+    .answer-box strong {
+      color: var(--success);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      background: var(--card-bg);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.55rem;
+      }
+      section.topic-card {
+        padding: 1.25rem;
+      }
+      nav.toc ul {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tutela Provisória Antecipada Antecedente e Estabilização</h1>
+    <p>Material de Estudo Completo, Sintético e Interativo — Curso ESA Nacional (Aula 02 · Prof. Guilherme Hartmann) integrado ao CPC/2015 (Arts. 218 § 4º, 294, 295, 300, 303, 304, 502, 701, 966 e 1.015, I) e Teses do STJ</p>
+    <div class="badge-container">
+      <span class="badge">ESA Nacional — OAB</span>
+      <span class="badge">Prof. Guilherme Hartmann</span>
+      <span class="badge">Arts. 303 e 304 do CPC</span>
+      <span class="badge">Lei Seca Literal Integrada</span>
+      <span class="badge">50 Questões Comentadas (21 ESA + 29 CPC/STJ)</span>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <nav class="toc">
+      <h2>Índice Rápido de Revisão</h2>
+      <ul>
+        <li><a href="#t1">1. Classificação e Exemplos Práticos</a></li>
+        <li><a href="#t2">2. Requerimento Incidental vs. Antecedente</a></li>
+        <li><a href="#t3">3. Tutela Antecipada Antecedente (Art. 303)</a></li>
+        <li><a href="#t4">4. Casos Práticos Analisados na Aula</a></li>
+        <li><a href="#t5">5. Estabilização vs. Coisa Julgada (Art. 304)</a></li>
+        <li><a href="#t6">6. Divergência no STJ e Prazos Sucessivos</a></li>
+        <li><a href="#t7">7. Honorários de 5% na Estabilização (Art. 701)</a></li>
+        <li><a href="#questoes">8. Bateria de Fixação (50 Questões Interativas)</a></li>
+      </ul>
+    </nav>
+
+    <!-- Tópico 1 -->
+    <section id="t1" class="topic-card">
+      <h2>1. Classificação da Tutela Provisória e Exemplos Práticos</h2>
+      <p>No sistema do <span class="code-term">CPC/2015</span>, a tutela jurisdicional divide-se estruturalmente em <strong>tutela definitiva</strong> (cognição exauriente, juízo de certeza e aptidão para a coisa julgada do <span class="code-term">Art. 502</span>) e <strong>tutela provisória</strong> (<span class="code-term">Arts. 294 a 311</span>, cognição sumária e juízo de probabilidade).</p>
+      <ul>
+        <li><strong>Urgência vs. Evidência (<span class="code-term">Art. 294</span>):</strong> A tutela de <em>urgência</em> exige a demonstração do risco de dano da própria urgência (<strong>perigo na demora</strong> — <em>periculum in mora</em>), além da probabilidade do direito (<em>fumus boni iuris</em>); já a tutela da <em>evidência</em> (<span class="code-term">Art. 311</span>) dispensa o perigo na demora.</li>
+        <li><strong>Cautelar vs. Antecipada:</strong> A tutela de urgência <strong>cautelar</strong> tem cunho <em>preventivo/assecuratório</em>, enquanto a tutela de urgência <strong>antecipada</strong> tem cunho <em>satisfativo</em>, proporcionando ao autor, desde o início do processo, o que ele só obteria ao final.</li>
+      </ul>
+
+      <blockquote class="lei-seca">
+        <span class="lei-header">Lei Seca — Código de Processo Civil (Arts. 294 e 300)</span>
+        <strong>Art. 294.</strong> A tutela provisória pode fundamentar-se em urgência ou evidência.<br>
+        Parágrafo único. A tutela provisória de urgência, cautelar ou antecipada, pode ser concedida em caráter antecedente ou incidental.<br><br>
+        <strong>Art. 300.</strong> A tutela de urgência será concedida quando houver elementos que evidenciem a probabilidade do direito e o perigo de dano ou o risco ao resultado útil do processo.<br>
+        <strong>§ 3º</strong> A tutela de urgência de natureza antecipada não será concedida quando houver perigo de irreversibilidade dos efeitos da decisão.
+      </blockquote>
+
+      <h3>Exemplos Práticos de Tutela Antecipada Satisfativa (Aula 01:03):</h3>
+      <ul>
+        <li><strong>Ação de alimentos:</strong> recebimento imediato de alimentos provisórios;</li>
+        <li><strong>Saúde:</strong> fornecimento de medicamentos ou autorização de plano de saúde para realização de cirurgia;</li>
+        <li><strong>Educação:</strong> garantia de permanência de criança matriculada na escola;</li>
+        <li><strong>Concursos públicos:</strong> manutenção do candidato na disputa enquanto contesta judicialmente reprovação em etapa anterior.</li>
+      </ul>
+    </section>
+
+    <!-- Tópico 2 -->
+    <section id="t2" class="topic-card">
+      <h2>2. Formas de Requerimento: Incidental vs. Antecedente</h2>
+      <p>Nos termos do <span class="code-term">Art. 294, parágrafo único</span>, a tutela antecipada pode ser pleiteada de forma <strong>incidental</strong> ou <strong>antecedente</strong> — sempre tramitando <em>nos mesmos autos</em> (sem processo separado):</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Modalidade</th>
+              <th>Conceito e Momento Processual</th>
+              <th>Relação com o Pedido Principal e Custas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Requerimento Incidental</strong></td>
+              <td>Acompanha o pedido principal já formulado na petição inicial completa (ex.: ação de cobrança, rescisão contratual, indenizatória) <strong>ou</strong> é requerido por petição simples no curso do processo quando surgir supervenientemente o <em>periculum in mora</em>.</td>
+              <td>É <strong>incidental ao pedido principal</strong>. Independe do pagamento de custas processuais (<span class="code-term">Art. 295 do CPC</span>).</td>
+            </tr>
+            <tr>
+              <td><strong>Requerimento Antecedente</strong></td>
+              <td>É preparatório: <strong>antecede a formulação completa do pedido principal</strong>. Ocorre quando a urgência é contemporânea à propositura da ação (<span class="code-term">Art. 303</span>), permitindo uma petição inicial simplificada focada apenas na tutela de urgência.</td>
+              <td>Distribuída ao juízo competente para conhecer do pedido principal (<span class="code-term">Art. 299</span>). O aditamento posterior ocorre <strong>nos mesmos autos e sem novas custas</strong> (<span class="code-term">Art. 303, § 3º</span>).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Tópico 3 -->
+    <section id="t3" class="topic-card">
+      <h2>3. Tutela Antecipada Antecedente: Conceito, Procedimento e Prazos (Art. 303)</h2>
+      <p>Quando a urgência é contemporânea à propositura da ação e o advogado não dispõe de tempo para elaborar uma petição inicial completa, o <span class="code-term">Art. 303 do CPC</span> autoriza uma <strong>petição inicial simplificada</strong> (de 1 ou 2 páginas), contendo os requisitos da tutela provisória de urgência (<span class="code-term">Art. 300 e § 3º</span>) e a mera indicação do futuro pedido principal.</p>
+
+      <blockquote class="lei-seca">
+        <span class="lei-header">Lei Seca — Código de Processo Civil (Art. 303)</span>
+        <strong>Art. 303.</strong> Nos casos em que a urgência for contemporânea à propositura da ação, a petição inicial pode limitar-se ao requerimento da tutela antecipada e à indicação do pedido de tutela final, com a exposição da lide, do direito que se busca realizar e do perigo de dano ou do risco ao resultado útil do processo.<br>
+        <strong>§ 1º</strong> Concedida a tutela antecipada a que se refere o caput deste artigo:<br>
+        <strong>I –</strong> o autor deverá aditar a petição inicial, com a complementação de sua argumentação, a juntada de novos documentos e a confirmação do pedido de tutela final, em <strong>15 (quinze) dias</strong> ou em outro prazo maior que o juiz fixar;<br>
+        <strong>II –</strong> o réu será citado e intimado para a audiência de conciliação ou de mediação na forma do art. 334;<br>
+        <strong>III –</strong> não havendo autocomposição, o prazo para contestação será contado na forma do art. 335.<br>
+        <strong>§ 2º</strong> Não realizado o aditamento a que se refere o inciso I do § 1º deste artigo, o processo será extinto sem resolução do mérito.<br>
+        <strong>§ 3º</strong> O aditamento a que se refere o inciso I do § 1º deste artigo dar-se-á nos mesmos autos, sem incidência de novas custas processuais.<br>
+        <strong>§ 4º</strong> Na petição inicial a que se refere o caput deste artigo, o autor terá de indicar o valor da causa, que deve levar em consideração o pedido de tutela final.<br>
+        <strong>§ 5º</strong> O autor indicará na petição inicial, ainda, que pretende valer-se do benefício previsto no caput deste artigo.<br>
+        <strong>§ 6º</strong> Caso entenda que não há elementos para a concessão de tutela antecipada, o órgão jurisdicional determinará a emenda da petição inicial em <strong>até 5 (cinco) dias</strong>, sob pena de ser indeferida e de o processo ser extinto sem resolução do mérito.
+      </blockquote>
+
+      <div class="callout callout-warning">
+        <div class="callout-title">Atenção aos Prazos de Aditamento/Emenda (Questão 15 do Curso!)</div>
+        <ul>
+          <li><strong>Tutela Antecipada CONCEDIDA (<span class="code-term">Art. 303, § 1º, I</span>):</strong> O autor tem <strong>15 dias</strong> (ou outro prazo maior que o juiz fixar) para aditar/emendar a inicial e formular o pedido principal.</li>
+          <li><strong>Tutela Antecipada INDEFERIDA (<span class="code-term">Art. 303, § 6º</span>):</strong> O prazo é reduzido para <strong>5 dias</strong> para emendar a inicial, sob pena de extinção sem resolução do mérito.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tópico 4 -->
+    <section id="t4" class="topic-card">
+      <h2>4. Casos Práticos Analisados na Aula</h2>
+      <ul>
+        <li><strong>1. Motorista de Aplicativo (TJSP, fev./2025):</strong> Descredenciado abruptamente da plataforma <em>Uber</em>, ingressa com petição inicial simplificada pedindo apenas o <strong>recadastramento imediato</strong> (essencial à sua subsistência), deixando eventual pedido de indenização por danos morais para o aditamento posterior.</li>
+        <li><strong>2. Obrigação de Não Fazer / Vizinhança (Plantão de Sábado):</strong> Vizinho planeja evento ruidoso; o advogado protocola no sábado petição inicial simples de tutela antecipada antecedente para impedir a realização do evento. Resolvida a urgência, muitas vezes não há interesse em prosseguir com ação indenizatória.</li>
+        <li><strong>3. Cirurgia Bariátrica (Plano de Saúde):</strong> Paciente com obesidade mórbida requer tutela antecipada antecedente para autorização imediata da cirurgia; obtida a cirurgia sem recurso do plano, o litígio pode encerrar-se pela estabilização.</li>
+        <li><strong>4. Entrega de Diploma Escolar (16:18):</strong> Estudante obtém a liminar e a escola entrega o diploma sem recorrer. Se o autor se der por satisfeito, não precisa aditar; porém, se ainda quiser pleitear <strong>danos morais</strong>, pode aditar a inicial formulando o pedido principal completo.</li>
+      </ul>
+    </section>
+
+    <!-- Tópico 5 -->
+    <section id="t5" class="topic-card">
+      <h2>5. Estabilização da Tutela Antecipada vs. Coisa Julgada (Art. 304)</h2>
+      <p>Concedida a tutela antecipada antecedente (<span class="code-term">Art. 303</span>), o réu é citado e intimado. Se o réu <strong>não interpuser o respectivo recurso</strong> (Agravo de Instrumento, <span class="code-term">Art. 1.015, I</span>) e o autor não aditar a inicial, a decisão <strong>torna-se estável</strong> e <strong>o processo é extinto</strong> (<span class="code-term">Art. 304, caput e § 1º</span>), mantendo-se os efeitos práticos da medida.</p>
+
+      <blockquote class="lei-seca">
+        <span class="lei-header">Lei Seca — Código de Processo Civil (Art. 304)</span>
+        <strong>Art. 304.</strong> A tutela antecipada, concedida nos termos do art. 303, torna-se estável se da decisão que a conceder não for interposto o respectivo recurso.<br>
+        <strong>§ 1º</strong> No caso previsto no caput, o processo será extinto.<br>
+        <strong>§ 2º</strong> Qualquer das partes poderá demandar a outra com o intuito de rever, reformar ou invalidar a tutela antecipada estabilizada nos termos do caput.<br>
+        <strong>§ 3º</strong> A tutela antecipada conservará seus efeitos enquanto não revista, reformada ou invalidada por decisão de mérito proferida na ação de que trata o § 2º.<br>
+        <strong>§ 4º</strong> Qualquer das partes poderá requerer o desarquivamento dos autos em que foi concedida a medida, para instruir a petição inicial da ação a que se refere o § 2º, prevento o juízo em que a tutela antecipada foi concedida.<br>
+        <strong>§ 5º</strong> O direito de rever, reformar ou invalidar a tutela antecipada, previsto no § 2º deste artigo, extingue-se após <strong>2 (dois) anos</strong>, contados da ciência da decisão que extinguiu o processo, nos termos do § 1º.<br>
+        <strong>§ 6º</strong> A decisão que concede a tutela <strong>não fará coisa julgada</strong>, mas a estabilidade dos respectivos efeitos só será afastada por decisão que a revir, reformar ou invalidar, proferida em ação ajuizada por uma das partes, nos termos do § 2º deste artigo.
+      </blockquote>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>Estabilização da Tutela Antecipada (Art. 304)</th>
+              <th>Coisa Julgada Material (Art. 502)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Cognição / Juízo</strong></td>
+              <td>Cognição sumária (juízo de probabilidade — <strong>51%</strong>).</td>
+              <td>Cognição exauriente (juízo de certeza — tutela definitiva).</td>
+            </tr>
+            <tr>
+              <td><strong>Natureza Jurídica</strong></td>
+              <td><strong>Preclusão <em>sui generis</em></strong> ("preclusão de seus gêneros"), fenômeno anterior à coisa julgada (<span class="code-term">Art. 304, § 6º</span>).</td>
+              <td>Autoridade que torna imutável e indiscutível a decisão de mérito (<span class="code-term">Art. 502</span>).</td>
+            </tr>
+            <tr>
+              <td><strong>Meio de Impugnação</strong></td>
+              <td><strong>NÃO cabe Ação Rescisória (Enunciado 33 do FPPC)!</strong> Cabe <strong>nova ação autônoma em 1ª instância</strong> perante o juízo prevento no prazo de <strong>2 anos</strong> (<span class="code-term">Art. 304, §§ 2º e 5º</span>).</td>
+              <td>Cabe <strong>Ação Rescisória</strong> (<span class="code-term">Art. 966</span>) no Tribunal, no prazo decadencial de 2 anos do trânsito em julgado.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Tópico 6 -->
+    <section id="t6" class="topic-card">
+      <h2>6. Jurisprudência do STJ: Oposição do Réu e Prazos Sucessivos</h2>
+      <h3>6.1. O que impede a estabilização? (1ª Turma vs. 3ª Turma do STJ)</h3>
+      <ul>
+        <li><strong>1ª Turma do STJ (Literalidade do <span class="code-term">Art. 304</span>):</strong> A apresentação de defesa/contestação não afasta a preclusão decorrente da não interposição do recurso; o réu precisa interpor <strong>Agravo de Instrumento</strong> para impedir a estabilização.</li>
+        <li><strong>3ª Turma do STJ (Posição mais recente — Destaque na Aula!):</strong> O réu pode impedir a estabilização não apenas por meio de recurso, mas demonstrando <strong>qualquer insurgência</strong>, inclusive mediante apresentação de <strong>contestação</strong> (antecipando sua defesa com base no <span class="code-term">Art. 218, § 4º, do CPC</span>, que considera tempestivo o ato praticado antes do termo inicial do prazo).</li>
+      </ul>
+
+      <blockquote class="lei-seca">
+        <span class="lei-header">Lei Seca — Código de Processo Civil (Art. 218, § 4º)</span>
+        <strong>Art. 218.</strong> (...) <strong>§ 4º</strong> Será considerado tempestivo o ato praticado antes do termo inicial do prazo.
+      </blockquote>
+
+      <h3>6.2. Prazos Sucessivos do Réu e do Autor (STJ, Julgados de 2020 e 2024)</h3>
+      <div class="flow-box">
+        <div class="flow-step"><strong>1º Passo (Prazo do Réu):</strong> Deferida a tutela antecipada antecedente (<span class="code-term">Art. 303</span>) e citado/intimado o réu, corre primeiro o prazo de <strong>15 dias para o réu recorrer / impugnar</strong>. Os prazos do réu e do autor <strong>NÃO são concomitantes</strong>, mas sim <strong>sucessivos (subsequentes)</strong>.</div>
+        <div class="flow-step branch-a"><strong>2º Passo A (Se o Réu NÃO recorrer):</strong> O autor (ciente da inércia do réu) pode optar por não aditar a inicial → <strong>Estabilização e extinção do processo (<span class="code-term">Art. 304</span>)</strong>!</div>
+        <div class="flow-step branch-b"><strong>2º Passo B (Se o Réu recorrer, ou se o Autor quiser outro pedido como danos morais):</strong> Segundo julgado do STJ de <strong>2024</strong>, deve haver <strong>intimação específica do autor</strong> (após o decurso do prazo do réu) para emendar/aditar a inicial em <strong>15 dias</strong> e formular o pedido principal.</div>
+      </div>
+    </section>
+
+    <!-- Tópico 7 -->
+    <section id="t7" class="topic-card">
+      <h2>7. Honorários Advocatícios na Estabilização — Analogia ao Art. 701 do CPC</h2>
+      <p>Quando ocorre a estabilização da tutela antecipada antecedente — isto é, <strong>se o réu não agravar e o autor não emendar/aditar a inicial</strong> —, o processo é extinto (<span class="code-term">Art. 304, § 1º</span>). Nessa hipótese, o STJ fixa os honorários advocatícios aplicando <strong>por analogia a regra da ação monitória (<span class="code-term">Art. 701 do CPC</span>)</strong>, no patamar de apenas <strong>5% (cinco por cento)</strong> sobre o valor atribuído à causa.</p>
+
+      <blockquote class="lei-seca">
+        <span class="lei-header">Lei Seca — Código de Processo Civil (Art. 701, caput)</span>
+        <strong>Art. 701.</strong> Sendo evidente o direito do autor, o juiz deferirá a expedição de mandado de pagamento, de entrega de coisa ou para execução de obrigação de fazer ou de não fazer, concedendo ao réu prazo de 15 (quinze) dias para o cumprimento e o pagamento de <strong>honorários advocatícios de cinco por cento do valor atribuído à causa</strong>.
+      </blockquote>
+    </section>
+
+    <!-- Bateria de 50 Questões -->
+    <section id="questoes" class="topic-card">
+      <h2>8. Bateria de Fixação: 50 Questões Objetivas Comentadas</h2>
+      <p>As questões <strong>01 a 21</strong> reproduzem integralmente o <em>Questionário Oficial da Aula 02 da ESA Nacional</em> (com o minuto exato da fundamentação no vídeo), e as questões <strong>22 a 50</strong> consolidam todos os artigos do CPC, enunciados do FPPC e julgados do STJ sobre o tema.</p>
+
+      <div class="quiz-controls">
+        <div class="score-board" id="score-display">Acertos: 0 / 0 respondidas</div>
+        <div class="btn-group">
+          <button class="btn" onclick="toggleAllAnswers()">Mostrar Todos os Gabaritos</button>
+          <button class="btn btn-secondary" onclick="hideAllAnswers()">Ocultar Todos</button>
+          <button class="btn btn-secondary" onclick="resetQuiz()">Reiniciar Simulado</button>
+        </div>
+      </div>
+
+      <div id="quiz-list"></div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Material de Estudo Autossuficiente — Direito Processual Civil / ESA Nacional (Aula 02 · Prof. Guilherme Hartmann)</p>
+  </footer>
+
+  <script>
+    const questionsData = [
+      {
+        q: "1. [ESA Nacional — Q.01] Quais são os aspectos essenciais que devem ser considerados ao formular uma petição inicial para requerer tutela provisória?",
+        tag: "ESA Nacional • 00:02:58",
+        options: [
+          "A) Diz respeito apenas ao valor da causa.",
+          "B) A urgência não precisa ser justificada.",
+          "C) Não é necessário fundamentar o pedido.",
+          "D) Requisitos da tutela provisória de urgência.",
+          "E) A petição deve ser complexa e detalhada."
+        ],
+        correct: 3,
+        comment: "É indispensável demonstrar os requisitos legais da tutela provisória de urgência previstos no art. 300 e § 3º do CPC (fumus boni iuris, periculum in mora e reversibilidade dos efeitos)."
+      },
+      {
+        q: "2. [ESA Nacional — Q.02] Em quais situações o legislador permite ao advogado fazer uma petição inicial simplificada para tutela provisória antecedente?",
+        tag: "ESA Nacional • 00:04:51",
+        options: [
+          "A) Quando a ação não é considerada urgente.",
+          "B) Quando a urgência for contemporânea à propositura da ação.",
+          "C) Quando o requerimento principal já é claro e completo.",
+          "D) Quando qualquer petição inicial for apresentada.",
+          "E) Quando o advogado não tem tempo para elaborar uma petição completa."
+        ],
+        correct: 1,
+        comment: "Art. 303, caput, do CPC: 'Nos casos em que a urgência for contemporânea à propositura da ação, a petição inicial pode limitar-se ao requerimento da tutela antecipada e à indicação do pedido de tutela final...'."
+      },
+      {
+        q: "3. [ESA Nacional — Q.03] Qual é a principal característica do requerimento de tutela provisória antecedente em relação ao pedido principal?",
+        tag: "ESA Nacional • 00:03:10",
+        options: [
+          "A) Deve ser feito com um advogado.",
+          "B) É apresentado após o pedido principal.",
+          "C) Antecede o pedido principal.",
+          "D) Não necessita de justificativa.",
+          "E) É um requerimento irrelevante."
+        ],
+        correct: 2,
+        comment: "O requerimento antecedente tem natureza preparatória, ou seja, antecede a formulação completa do pedido principal."
+      },
+      {
+        q: "4. [ESA Nacional — Q.04] Qual é a condição necessária para formular um requerimento de tutela provisória durante o processo?",
+        tag: "ESA Nacional • 00:02:38",
+        options: [
+          "A) Quando surgir o perigo em mora (periculum in mora).",
+          "B) Quando o juiz solicitar uma revisão do caso.",
+          "C) Quando as partes chegam a um acordo sobre a tutela.",
+          "D) Quando a petição inicial for rejeitada.",
+          "E) Quando o processo é arquivado."
+        ],
+        correct: 0,
+        comment: "Durante o andamento do processo, pode ser formulado pedido incidental de tutela provisória de urgência a qualquer momento, especialmente quando surgir o periculum in mora."
+      },
+      {
+        q: "5. [ESA Nacional — Q.05] Qual é a finalidade principal da tutela provisória antecipada antecedente no contexto do CPC de 2015?",
+        tag: "ESA Nacional • 00:00:13",
+        options: [
+          "A) Oferecer uma proteção imediata ao direito que está em risco de lesão durante o curso do processo.",
+          "B) Evitar a apresentação de recursos no processo civil.",
+          "C) Impedir a tramitação de processos sem decisão judicial.",
+          "D) Subsidiar o processo penal em casos de urgência.",
+          "E) Garantir a execução de uma sentença já proferida."
+        ],
+        correct: 0,
+        comment: "A tutela antecipada antecedente visa garantir proteção satisfativa imediata ao direito ameaçado de lesão grave ou perecimento no curso do processo."
+      },
+      {
+        q: "6. [ESA Nacional — Q.06] Qual é a relação entre a tutela provisória e o pedido principal em uma ação (requerimento incidental)?",
+        tag: "ESA Nacional • 00:02:13",
+        options: [
+          "A) A tutela provisória deve ser feita após a decisão do pedido principal.",
+          "B) A tutela provisória é incidental ao pedido principal.",
+          "C) A tutela provisória substitui o pedido principal.",
+          "D) A tutela provisória é independente do pedido principal.",
+          "E) Não há relação entre a tutela provisória e o pedido principal."
+        ],
+        correct: 1,
+        comment: "Quando formulada em conjunto com o pedido principal ou no curso da demanda, a tutela provisória é incidental ao pedido principal (arts. 294, p.ú., e 295 do CPC)."
+      },
+      {
+        q: "7. [ESA Nacional — Q.07] De acordo com as jurisprudências mencionadas, como se caracterizam os prazos do réu e do autor na fase de recurso?",
+        tag: "ESA Nacional • 00:16:51",
+        options: [
+          "A) Os prazos são sucessivos, ou seja, não ocorrem ao mesmo tempo.",
+          "B) Os prazos são concomitantes, ocorrendo simultaneamente.",
+          "C) Os prazos se encerram automaticamente um após o outro.",
+          "D) O autor deve aguardar o prazo do réu antes de qualquer ação.",
+          "E) O prazo do réu é mais extenso que o do autor."
+        ],
+        correct: 0,
+        comment: "Conforme julgados do STJ (2020 e 2024), os prazos do réu (para recorrer) e do autor (para emendar/aditar a inicial) são sucessivos/subsequentes, não correndo concomitantemente."
+      },
+      {
+        q: "8. [ESA Nacional — Q.08] Qual é a implicação da oposição do réu em uma tutela provisória antecipada já deferida?",
+        tag: "ESA Nacional • 00:14:38",
+        options: [
+          "A) O réu não pode contestar a decisão de tutela provisória.",
+          "B) A oposição só é válida se feita antes do deferimento.",
+          "C) A oposição do réu não tem efeito no processo.",
+          "D) A oposição do réu, por meio de contestação, pode impedir a estabilização da decisão.",
+          "E) O réu deve apenas aguardar o término do processo."
+        ],
+        correct: 3,
+        comment: "Pelo entendimento da 3ª Turma do STJ, qualquer manifestação de insurgência do réu — inclusive a apresentação de contestação (art. 218, § 4º, CPC) — impede a estabilização do art. 304."
+      },
+      {
+        q: "9. [ESA Nacional — Q.09] Qual é a principal função da tutela provisória antecipada em um processo judicial?",
+        tag: "ESA Nacional • 00:01:03",
+        options: [
+          "A) Adiar a decisão para uma data futura.",
+          "B) Impedir a parte contrária de se manifestar.",
+          "C) Permitir que o juiz tome uma decisão sem provas.",
+          "D) Garantir que o processo não tenha nenhuma contestação.",
+          "E) Proporcionar ao autor o que obtém ao final do processo desde já."
+        ],
+        correct: 4,
+        comment: "Por ter caráter satisfativo, a tutela antecipada entrega desde já ao autor os efeitos práticos do provimento final."
+      },
+      {
+        q: "10. [ESA Nacional — Q.10] Qual é o fundamento para a decisão de estabilização da tutela provisória antecipada antecedente, caso o réu não recorra?",
+        tag: "ESA Nacional • 00:09:49",
+        options: [
+          "A) A decisão automática se torna definitiva sem necessidade de contestação.",
+          "B) A decisão se baseia em probabilidade, com o juiz deferindo a tutela com 51% de certeza do direito.",
+          "C) O autor pode recorrer a qualquer momento após a concessão da tutela.",
+          "D) O juiz pode revisar a tutela sem a necessidade de nova ação.",
+          "E) A decisão é considerada coisa julgada desde o início."
+        ],
+        correct: 1,
+        comment: "A decisão concessiva da tutela antecipada baseia-se em cognição sumária (juízo de probabilidade de 51%), motivo pelo qual se estabiliza sem formar coisa julgada material (art. 304, § 6º, CPC)."
+      },
+      {
+        q: "11. [ESA Nacional — Q.11] Qual é a principal diferença entre a tutela provisória de urgência cautelar e a antecipada?",
+        tag: "ESA Nacional • 00:00:56",
+        options: [
+          "A) A cautelar tem cunho preventivo, enquanto a antecipada tem cunho satisfativo.",
+          "B) A cautelar é sempre mais rápida.",
+          "C) Ambas têm o mesmo cunho.",
+          "D) A antecipada exige mais documentos.",
+          "E) Ambas sempre requerem o risco de dano."
+        ],
+        correct: 0,
+        comment: "A tutela cautelar tem cunho preventivo/assecuratório; a tutela antecipada tem cunho satisfativo."
+      },
+      {
+        q: "12. [ESA Nacional — Q.12] Qual é a condição necessária para a tutela provisória de urgência ser concedida?",
+        tag: "ESA Nacional • 00:00:48",
+        options: [
+          "A) Demonstrar benefício ao réu.",
+          "B) Demonstração do risco de dano da própria urgência, ou seja, do perigo na demora.",
+          "C) A presença de um advogado.",
+          "D) Aprovação de um relatório.",
+          "E) Necessidade de um testemunho."
+        ],
+        correct: 1,
+        comment: "Diferentemente da tutela de evidência (art. 311), a tutela de urgência exige a comprovação do perigo na demora (risco iminente de dano, art. 300 do CPC)."
+      },
+      {
+        q: "13. [ESA Nacional — Q.13] Qual é a porcentagem dos honorários advocatícios mencionada na ação monitória em comparação aos padrões geralmente percebidos no contexto jurídico brasileiro?",
+        tag: "ESA Nacional • 00:18:45",
+        options: [
+          "A) 12%",
+          "B) 5%",
+          "C) 15%",
+          "D) 10%",
+          "E) 3%"
+        ],
+        correct: 1,
+        comment: "Art. 701 do CPC prevê honorários advocatícios de 5% na ação monitória, percentual aplicado por analogia pelo STJ na estabilização da tutela antecipada antecedente."
+      },
+      {
+        q: "14. [ESA Nacional — Q.14] Em que tipo de situações a tutela provisória antecipada pode ser aplicada?",
+        tag: "ESA Nacional • 00:01:19",
+        options: [
+          "A) Em ações de cobrança de taxas administrativas.",
+          "B) Em ações que buscam alimentos ou fornecimento de medicamentos.",
+          "C) Em todos os tipos de conflitos judiciais sem exceção.",
+          "D) Em ações que visam apenas a indenização de danos morais.",
+          "E) Somente em casos de litígios imobiliários."
+        ],
+        correct: 1,
+        comment: "Ações de alimentos, fornecimento de medicamentos, autorização de cirurgias, matrícula escolar e concurso público são exemplos práticos clássicos citados na aula."
+      },
+      {
+        q: "15. [ESA Nacional — Q.15] Qual é a principal diferença entre a tutela provisória antecedente (deferida) e a outra hipótese (indeferida, § 6º), no que diz respeito ao prazo para emendar a petição inicial?",
+        tag: "ESA Nacional • 00:05:46",
+        options: [
+          "A) O prazo para emendar a inicial é sempre de 30 dias, independente do tipo de tutela.",
+          "B) Na tutela comum, o prazo para emenda é de 15 dias.",
+          "C) Na tutela provisória antecedente, não há prazo para emendar a inicial.",
+          "D) Ambas as tutelas têm o mesmo prazo de 5 dias para emendar a inicial.",
+          "E) Na tutela provisória antecedente, o autor tem 15 dias para emendar a inicial, enquanto na tutela comum (indeferimento do § 6º), o prazo é de 5 dias."
+        ],
+        correct: 4,
+        comment: "Concedida a tutela antecipada antecedente, o prazo para aditamento/emenda é de 15 dias (art. 303, § 1º, I); se indeferida, o prazo é de 5 dias (art. 303, § 6º)."
+      },
+      {
+        q: "16. [ESA Nacional — Q.16] O que pode ser considerado como preclusão de seus gêneros (sui generis) na estabilização da tutela provisória?",
+        tag: "ESA Nacional • 00:10:48",
+        options: [
+          "A) É um recurso que pode ser interposto pelo autor a qualquer momento.",
+          "B) É a fase em que a decisão se torna irrevogável e imutável.",
+          "C) É algo que ocorre antes da coisa julgada, referindo-se à estabilidade temporária da decisão.",
+          "D) É a possibilidade de revisão da decisão por um tribunal superior.",
+          "E) É a aceitação de uma nova ação que extingue a anterior."
+        ],
+        correct: 2,
+        comment: "A estabilização do art. 304 não gera coisa julgada (§ 6º), mas uma estabilidade própria (preclusão sui generis) anterior à coisa julgada, sujeita à ação revisional de 1º grau em 2 anos."
+      },
+      {
+        q: "17. [ESA Nacional — Q.17] Em relação à remuneração do advogado, qual artigo do CPC é mencionado como referência para a questão dos honorários advocatícios?",
+        tag: "ESA Nacional • 00:18:45",
+        options: [
+          "A) artigo 709",
+          "B) artigo 703",
+          "C) artigo 701",
+          "D) artigo 702",
+          "E) artigo 800"
+        ],
+        correct: 2,
+        comment: "Art. 701, caput, do CPC (ação monitória), que fixa honorários de 5% e é aplicado por analogia pelo STJ na estabilização da tutela antecipada."
+      },
+      {
+        q: "18. [ESA Nacional — Q.18] Qual é a função da emenda da inicial pelo autor após a concessão da tutela provisória?",
+        tag: "ESA Nacional • 00:16:18",
+        options: [
+          "A) A emenda não permite nenhuma nova ação por parte do autor.",
+          "B) O autor não pode emendar a inicial caso o réu não recorra.",
+          "C) A emenda da inicial permite que o autor formule um pedido principal, buscando então obter sua tutela jurídica.",
+          "D) A emenda leva à extinção do processo.",
+          "E) O autor deve sempre aguardar a resposta do réu antes de emendar."
+        ],
+        correct: 2,
+        comment: "A emenda/aditamento da inicial permite ao autor formular em definitivo o pedido principal (ex.: danos morais) para obter a tutela jurídica definitiva."
+      },
+      {
+        q: "19. [ESA Nacional — Q.19] De acordo com os exemplos apresentados, quais são as características que tornam a tutela provisória antecedente uma solução rápida em casos de urgência?",
+        tag: "ESA Nacional • 00:08:07",
+        options: [
+          "A) A decisão judicial é imediata, independentemente da análise do caso.",
+          "B) Ela exige que o autor apresente todas as provas de antemão.",
+          "C) Ela permite que o autor faça um requerimento imediato, limitando-se a um pedido simples, sem necessidade de argumentação extensa.",
+          "D) Os pedidos devem ser detalhados e complexos para serem aceitos.",
+          "E) Não é necessário justificar a urgência do pedido."
+        ],
+        correct: 2,
+        comment: "Pelo art. 303 do CPC, o advogado pode protocolar rapidamente uma petição simples de 1 ou 2 páginas focada apenas na urgência imediata."
+      },
+      {
+        q: "20. [ESA Nacional — Q.20] Qual é a classificação abordada em relação à tutela provisória no contexto do processo civil?",
+        tag: "ESA Nacional • 00:00:21",
+        options: [
+          "A) A classificação segundo a natureza dos direitos discutidos.",
+          "B) A classificação entre tutela provisória e tutela definitiva.",
+          "C) A classificação segundo o tempo de tramitação do processo.",
+          "D) A classificação apenas entre tutela antecipada e cautelar.",
+          "E) A classificação de acordo com as partes envolvidas no processo."
+        ],
+        correct: 1,
+        comment: "A classificação inicial distingue a tutela provisória (cognição sumária) da tutela definitiva (cognição exauriente)."
+      },
+      {
+        q: "21. [ESA Nacional — Q.21] Qual a condição que deve ser observada para que os honorários sejam aplicados conforme estabelecido na jurisprudência do STJ?",
+        tag: "ESA Nacional • 00:18:32",
+        options: [
+          "A) Se o réu não agravar e o autor não emendar a inicial.",
+          "B) Se o autor agravar.",
+          "C) Se o juiz solicitar.",
+          "D) Se o réu contestar.",
+          "E) Se as partes chegarem a um acordo."
+        ],
+        correct: 0,
+        comment: "Os honorários de 5% por analogia ao art. 701 do CPC aplicam-se quando há estabilização e extinção do processo: o réu não agrava e o autor não emenda a inicial."
+      },
+      {
+        q: "22. A petição inicial que requer tutela provisória antecipada em caráter antecedente (art. 303 do CPC) tramita em processo autônomo e separado do pedido principal?",
+        tag: "CPC • Arts. 299 e 303, § 3º",
+        options: [
+          "A) Sim, corre em autos apartados em outra vara cível.",
+          "B) Não. No CPC/2015, tudo tramita nos mesmos autos (sincretismo processual), devendo a inicial simplificada ser distribuída ao juízo competente para conhecer do pedido principal (art. 299), onde ocorrerá o aditamento sem novas custas (art. 303, § 3º).",
+          "C) Sim, exige a abertura de um segundo processo após 15 dias com novo pagamento integral de custas.",
+          "D) Somente se o réu residir em outro Estado.",
+          "E) Depende de autorização prévia do Corregedor-Geral de Justiça."
+        ],
+        correct: 1,
+        comment: "O CPC/2015 extinguiu o processo cautelar autônomo do CPC/1973. Tanto o pedido antecedente quanto o aditamento do pedido final ocorrem nos mesmos autos e sem incidência de novas custas (art. 303, § 3º)."
+      },
+      {
+        q: "23. Na petição inicial de tutela antecipada requerida em caráter antecedente (art. 303, §§ 4º e 5º, do CPC), o autor deve indicar:",
+        tag: "CPC • Art. 303, §§ 4º e 5º",
+        options: [
+          "A) O valor da causa correspondente apenas ao prejuízo diário da liminar.",
+          "B) O valor da causa levando em consideração o pedido de tutela final (§ 4º) e a indicação expressa de que pretende valer-se do benefício do art. 303, caput (§ 5º).",
+          "C) Apenas o nome das testemunhas, sendo dispensado o valor da causa.",
+          "D) A renúncia irretratável ao pedido principal.",
+          "E) O rol completo de quesitos periciais desde a primeira folha."
+        ],
+        correct: 1,
+        comment: "Art. 303, § 4º: 'o autor terá de indicar o valor da causa, que deve levar em consideração o pedido de tutela final.' § 5º: 'O autor indicará na petição inicial, ainda, que pretende valer-se do benefício previsto no caput deste artigo.'"
+      },
+      {
+        q: "24. Concedida a tutela antecipada antecedente (art. 303), caso não haja estabilização e o autor deixe transcorrer o prazo de 15 dias (ou maior fixado pelo juiz) sem realizar o aditamento da petição inicial, qual será a consequência processual?",
+        tag: "CPC • Art. 303, § 2º",
+        options: [
+          "A) O processo será extinto com resolução do mérito e coisa julgada material.",
+          "B) O processo será extinto sem resolução do mérito (§ 2º), cessando a eficácia da medida.",
+          "C) O réu será condenado à revelia automática no pedido principal.",
+          "D) O juiz redigirá de ofício o pedido principal pelo autor.",
+          "E) A multa diária reverterá em favor do autor por tempo indeterminado."
+        ],
+        correct: 1,
+        comment: "Art. 303, § 2º, do CPC: 'Não realizado o aditamento a que se refere o inciso I do § 1º deste artigo, o processo será extinto sem resolução do mérito.'"
+      },
+      {
+        q: "25. A estabilização prevista no art. 304 do CPC aplica-se a qual espécie de tutela provisória?",
+        tag: "CPC • Art. 304, caput",
+        options: [
+          "A) À tutela cautelar antecedente e à tutela da evidência.",
+          "B) Exclusivamente à tutela antecipada requerida em caráter antecedente (art. 303).",
+          "C) Apenas às sentenças definitivas de mérito transitadas em julgado.",
+          "D) A todas as tutelas provisórias incidentais.",
+          "E) Exclusivamente às ações penais privadas."
+        ],
+        correct: 1,
+        comment: "O art. 304, caput, do CPC restringe expressamente a estabilização à 'tutela antecipada, concedida nos termos do art. 303' (ou seja, tutela antecipada antecedente)."
+      },
+      {
+        q: "26. Sobre o prazo para propor a ação autônoma destinada a rever, reformar ou invalidar a tutela antecipada estabilizada (art. 304, §§ 2º, 4º e 5º, do CPC), assinale a alternativa correta:",
+        tag: "CPC • Art. 304, §§ 2º e 5º",
+        options: [
+          "A) Extingue-se após 2 (dois) anos, contados da ciência da decisão que extinguiu o processo, sendo prevento o juízo em que a tutela foi concedida.",
+          "B) É imprescritível, podendo ser ajuizada a qualquer tempo após 20 anos.",
+          "C) Extingue-se em 15 dias contados da citação do réu.",
+          "D) Deve ser proposta diretamente no Supremo Tribunal Federal.",
+          "E) Extingue-se em 5 anos contados da distribuição da inicial."
+        ],
+        correct: 0,
+        comment: "Art. 304, § 5º, do CPC: 'O direito de rever, reformar ou invalidar a tutela antecipada, previsto no § 2º deste artigo, extingue-se após 2 (dois) anos, contados da ciência da decisão que extinguiu o processo, nos termos do § 1º.' Pelo § 4º, é prevento o juízo em que a tutela foi concedida."
+      },
+      {
+        q: "27. De acordo com o Enunciado 33 do Fórum Permanente de Processualistas Civis (FPPC), citado pelo Prof. Guilherme Hartmann, cabe Ação Rescisória contra a decisão que estabiliza a tutela antecipada antecedente?",
+        tag: "FPPC • Enunciado 33",
+        options: [
+          "A) Sim, pois a estabilização equivale à coisa julgada material.",
+          "B) Não cabe ação rescisória nos casos de estabilização da tutela antecipada de urgência, pois não há coisa julgada material (art. 304, § 6º, CPC).",
+          "C) Sim, mas apenas no prazo de 1 ano.",
+          "D) Cabe ação rescisória exclusivamente se o réu for a Fazenda Pública.",
+          "E) Cabe ação rescisória apenas para alterar os honorários."
+        ],
+        correct: 1,
+        comment: "Enunciado 33 do FPPC: 'Não cabe ação rescisória nos casos de estabilização da tutela antecipada de urgência.' A via adequada é a ação autônoma em 1º grau prevista no art. 304, § 2º."
+      },
+      {
+        q: "28. Como se posicionam a 1ª Turma e a 3ª Turma do STJ quanto à possibilidade de a contestação do réu impedir a estabilização da tutela antecipada (art. 304 do CPC)?",
+        tag: "STJ • 1ª Turma vs. 3ª Turma",
+        options: [
+          "A) Ambas as Turmas proíbem o réu de contestar em tutela antecedente.",
+          "B) A 1ª Turma entende que apenas a interposição de recurso (agravo de instrumento) impede a estabilização; já a 3ª Turma entende que qualquer insurgência do réu, inclusive a contestação (art. 218, § 4º), impede a estabilização.",
+          "C) Ambas as Turmas exigem recurso extraordinário ao STF para impedir a estabilização.",
+          "D) A 3ª Turma exige depósito prévio de 100% do valor da causa.",
+          "E) A 1ª Turma permite que o réu impeça a estabilização por simples telefonema à secretaria."
+        ],
+        correct: 1,
+        comment: "Essa é a clássica divergência no STJ exposta na aula (13:20): a 1ª Turma exige o recurso do art. 304 (interpretação literal), enquanto a 3ª Turma admite a contestação ou outra impugnação idônea para afastar a estabilização."
+      },
+      {
+        q: "29. O que ocorre com os efeitos práticos da tutela antecipada estabilizada após a extinção do processo prevista no art. 304, § 1º, do CPC?",
+        tag: "CPC • Art. 304, § 3º",
+        options: [
+          "A) Cessam imediatamente com a sentença de extinção.",
+          "B) A tutela antecipada conservará seus efeitos enquanto não revista, reformada ou invalidada por decisão de mérito proferida na ação autônoma do § 2º.",
+          "C) Só valem por mais 30 dias após a extinção.",
+          "D) Dependem de renovação semestral pelo autor.",
+          "E) Transformam-se automaticamente em multa penal."
+        ],
+        correct: 1,
+        comment: "Art. 304, § 3º, do CPC: 'A tutela antecipada conservará seus efeitos enquanto não revista, reformada ou invalidada por decisão de mérito proferida na ação de que trata o § 2º.'"
+      },
+      {
+        q: "30. Segundo o julgado do STJ de 2024 citado na aula sobre a tutela antecipada antecedente, como deve ocorrer a intimação do autor para aditar/emendar a petição inicial?",
+        tag: "STJ • Julgado 2024 (Aula 16:51)",
+        options: [
+          "A) Não há necessidade de intimação alguma, correndo o prazo automaticamente da distribuição.",
+          "B) A intimação para o autor emendar a inicial deve ser específica, aguardando o decurso do prazo do réu para recorrer.",
+          "C) A intimação do autor ocorre antes mesmo de o juiz decidir a liminar.",
+          "D) O autor é intimado por edital publicado no Diário Oficial da União.",
+          "E) O prazo do autor corre simultaneamente ao prazo de contestação do réu."
+        ],
+        correct: 1,
+        comment: "Conforme o STJ (julgado de 2024), os prazos são sucessivos e exige-se intimação específica do autor para emendar a inicial após o prazo do réu para recorrer, garantindo segurança jurídica ao autor."
+      },
+      {
+        q: "31. Caso a parte interessada queira instruir a nova ação revisional (art. 304, § 2º) contra tutela antecipada estabilizada cujos autos já foram extintos e arquivados, o que prevê o art. 304, § 4º, do CPC?",
+        tag: "CPC • Art. 304, § 4º",
+        options: [
+          "A) É proibido desarquivar os autos antigos.",
+          "B) Qualquer das partes poderá requerer o desarquivamento dos autos em que foi concedida a medida, para instruir a petição inicial da ação do § 2º, prevento o juízo em que a tutela foi concedida.",
+          "C) Os autos são destruídos após 30 dias da estabilização.",
+          "D) A nova ação deve ser distribuída livremente para outro juízo.",
+          "E) Apenas o Ministério Público pode requerer o desarquivamento."
+        ],
+        correct: 1,
+        comment: "Literalidade do art. 304, § 4º, do CPC."
+      },
+      {
+        q: "32. Se o réu praticar ato processual (como apresentar contestação ou impugnação) antes mesmo de iniciado formalmente o prazo para a defesa do pedido principal na tutela antecedente, esse ato pode ser considerado intempestivo por prematuridade?",
+        tag: "CPC • Art. 218, § 4º",
+        options: [
+          "A) Sim, ato prematuro é sempre nulo de pleno direito.",
+          "B) Não. Nos termos do art. 218, § 4º, do CPC, será considerado tempestivo o ato praticado antes do termo inicial do prazo.",
+          "C) Sim, salvo em processos trabalhistas.",
+          "D) Depende de recolhimento de multa de 10%.",
+          "E) Só é válido se ratificado em 24 horas."
+        ],
+        correct: 1,
+        comment: "Art. 218, § 4º, do CPC: 'Será considerado tempestivo o ato praticado antes do termo inicial do prazo.' É justamente esse dispositivo que sustenta a discussão na 3ª Turma do STJ sobre a contestação prematura."
+      },
+      {
+        q: "33. No caso da tutela antecipada antecedente, quando NÃO há concessão da liminar (art. 303, § 6º), por que o prazo de emenda (até 5 dias) é diferente do prazo geral de emenda da petição inicial do procedimento comum (art. 321)?",
+        tag: "CPC • Art. 303, § 6º vs. Art. 321",
+        options: [
+          "A) No art. 321 o prazo é de 15 dias; já no art. 303, § 6º, o legislador fixou prazo reduzido de até 5 dias justamente porque a inicial era simplificada e a liminar de urgência foi indeferida.",
+          "B) No art. 321 o prazo é de 2 dias.",
+          "C) No art. 303, § 6º o prazo é de 30 dias.",
+          "D) Ambos têm prazo de 48 horas.",
+          "E) Não existe emenda no procedimento comum."
+        ],
+        correct: 0,
+        comment: "Enquanto o art. 321 do CPC prevê 15 dias para emenda da inicial no procedimento comum, o art. 303, § 6º estabelece prazo específico de até 5 dias quando indeferida a tutela antecipada antecedente."
+      },
+      {
+        q: "34. Qual é o recurso cabível contra a decisão interlocutória que concede ou indefere a tutela provisória antecipada antecedente?",
+        tag: "CPC • Art. 1.015, I",
+        options: [
+          "A) Apelação.",
+          "B) Agravo de Instrumento (art. 1.015, I, do CPC).",
+          "C) Embargos Infringentes.",
+          "D) Recurso Ordinário.",
+          "E) Mandado de Segurança em substituição ao recurso."
+        ],
+        correct: 1,
+        comment: "Art. 1.015, I, do CPC: 'Cabe agravo de instrumento contra as decisões interlocutórias que versarem sobre: I – tutelas provisórias'."
+      },
+      {
+        q: "35. A tutela provisória requerida em caráter incidental (no curso do processo ou junto com a inicial completa) exige o pagamento de novas custas processuais?",
+        tag: "CPC • Art. 295",
+        options: [
+          "A) Sim, custas de 5% sobre o valor da causa.",
+          "B) Não. Nos termos do art. 295 do CPC, a tutela provisória requerida em caráter incidental independe do pagamento de custas.",
+          "C) Sim, salvo na Justiça Federal.",
+          "D) Exige pagamento de custas apenas se for tutela de evidência.",
+          "E) Exige depósito prévio de honorários."
+        ],
+        correct: 1,
+        comment: "Art. 295 do CPC: 'A tutela provisória requerida em caráter incidental independe do pagamento de custas.'"
+      },
+      {
+        q: "36. Qual é a consequência prevista no art. 302 do CPC caso o autor obtenha liminarmente a tutela antecipada em caráter antecedente, mas não forneça os meios necessários para a citação do requerido no prazo de 5 (cinco) dias?",
+        tag: "CPC • Art. 302, II",
+        options: [
+          "A) O juiz cita o réu por telefone.",
+          "B) Independentemente da reparação por dano processual, a parte responde objetivamente pelo prejuízo que a efetivação da tutela de urgência causar à parte adversa (art. 302, II).",
+          "C) A tutela torna-se definitiva com coisa julgada.",
+          "D) O prazo de citação é prorrogado automaticamente por 1 ano.",
+          "E) Não há nenhuma consequência jurídica."
+        ],
+        correct: 1,
+        comment: "Art. 302, II, do CPC: a parte responde pelo prejuízo causado à parte adversa se, 'obtida liminarmente a tutela em caráter antecedente, não fornecer os meios necessários para a citação do requerido no prazo de 5 (cinco) dias'."
+      },
+      {
+        q: "37. Em uma ação de tutela antecipada antecedente em que o estudante pediu apenas a entrega imediata do diploma escolar, a escola cumpre a liminar, entrega o diploma e não recorre. Porém, o estudante também sofreu dano moral grave e quer ser indenizado. O que ele deve fazer?",
+        tag: "Prática Forense • Aula 16:18",
+        options: [
+          "A) Nada, pois a entrega do diploma proíbe o pedido de danos morais.",
+          "B) Deve aditar/emendar a petição inicial no prazo de 15 dias para formular o pedido principal completo (incluindo os danos morais), impedindo a extinção do processo pela estabilização.",
+          "C) Deve interpor recurso extraordinário ao STF.",
+          "D) Deve pedir a prisão do diretor da escola.",
+          "E) Deve aguardar 2 anos para pedir danos morais nos mesmos autos."
+        ],
+        correct: 1,
+        comment: "Como explicado pelo Prof. Guilherme Hartmann (16:18), se o autor desejar algo além do que foi concedido na liminar (como indenização por danos morais), ele deve aditar a inicial formulando o pedido principal."
+      },
+      {
+        q: "38. A tutela provisória da evidência (art. 311 do CPC) pode ser concedida em caráter antecedente com estabilização do art. 304?",
+        tag: "CPC • Arts. 294, p.ú. e 311",
+        options: [
+          "A) Sim, todas as hipóteses do art. 311 admitem estabilização antecedente.",
+          "B) Não. Pelo art. 294, parágrafo único, apenas a tutela provisória de urgência (cautelar ou antecipada) admite requerimento antecedente; e a estabilização (art. 304) é exclusiva da tutela antecipada de urgência do art. 303.",
+          "C) Sim, desde que haja perigo na demora.",
+          "D) Apenas no inciso IV do art. 311.",
+          "E) Apenas se o réu for revel no prazo de 5 dias."
+        ],
+        correct: 1,
+        comment: "Art. 294, parágrafo único: 'A tutela provisória de urgência, cautelar ou antecipada, pode ser concedida em caráter antecedente ou incidental.' A tutela da evidência (art. 311) é sempre incidental."
+      },
+      {
+        q: "39. Se o autor ingressar com tutela antecipada antecedente (art. 303) e o juiz entender que a medida tem natureza cautelar, ou vice-versa, aplica-se:",
+        tag: "CPC • Art. 305, p.ú. • Fungibilidade",
+        options: [
+          "A) O indeferimento liminar sem direito a emenda.",
+          "B) A fungibilidade entre as tutelas provisórias de urgência, convertendo-se o procedimento para o rito adequado.",
+          "C) A condenação do autor por litigância de má-fé.",
+          "D) A remessa dos autos ao Tribunal Regional Eleitoral.",
+          "E) A suspensão do processo por 180 dias."
+        ],
+        correct: 1,
+        comment: "Pela fungibilidade (art. 305, parágrafo único, do CPC e Enunciado 45 do CJF), o juiz converte e adapta o rito quando há erro na qualificação entre cautelar e antecipada."
+      },
+      {
+        q: "40. Qual é o fundamento pelo qual o juiz exige a reversibilidade dos efeitos na tutela antecipada (art. 300, § 3º), inclusive na requerida em caráter antecedente?",
+        tag: "CPC • Art. 300, § 3º",
+        options: [
+          "A) Garantir que, caso a tutela seja revogada posteriormente ou julgado improcedente o pedido, seja possível retornar ao status quo ante.",
+          "B) Impedir que o autor utilize provas documentais.",
+          "C) Obrigar o réu a pagar custas em dobro.",
+          "D) Evitar que o processo dure mais de 30 dias.",
+          "E) Substituir a necessidade de citação."
+        ],
+        correct: 0,
+        comment: "Art. 300, § 3º: visa assegurar a possibilidade fática de retorno ao status quo ante caso a decisão provisória venha a ser revogada (ressalvada a ponderação na irreversibilidade recíproca)."
+      },
+      {
+        q: "41. Caso o juiz conceda tutela antecipada antecedente e o réu não recorra, estabilizando-se a medida (art. 304), quem poderá ajuizar a ação autônoma do § 2º dentro do prazo de 2 anos?",
+        tag: "CPC • Art. 304, § 2º",
+        options: [
+          "A) Exclusivamente o réu.",
+          "B) Exclusivamente o autor.",
+          "C) Qualquer das partes (autor ou réu) poderá demandar a outra com o intuito de rever, reformar ou invalidar a tutela antecipada estabilizada.",
+          "D) Apenas o Ministério Público.",
+          "E) Apenas terceiros estranhos ao processo."
+        ],
+        correct: 2,
+        comment: "Art. 304, § 2º, do CPC: 'Qualquer das partes poderá demandar a outra com o intuito de rever, reformar ou invalidar a tutela antecipada estabilizada nos termos do caput.'"
+      },
+      {
+        q: "42. No procedimento da tutela antecipada antecedente (art. 303, § 1º, II e III), após o aditamento da inicial pelo autor (quando não há estabilização), como prossegue o rito?",
+        tag: "CPC • Art. 303, § 1º, II e III",
+        options: [
+          "A) O juiz sentencia imediatamente sem ouvir o réu.",
+          "B) O réu será citado e intimado para a audiência de conciliação ou de mediação (art. 334) e, não havendo autocomposição, o prazo para contestação será contado na forma do art. 335.",
+          "C) O processo é remetido ao arquivo definitivo.",
+          "D) O réu tem 48 horas para pagar sob pena de prisão.",
+          "E) Abre-se imediatamente a fase de cumprimento definitivo de sentença."
+        ],
+        correct: 1,
+        comment: "Literalidade dos incisos II e III do § 1º do art. 303 do CPC."
+      },
+      {
+        q: "43. Qual é a diferença prática entre a forma de requerimento antecedente no CPC/1973 e no CPC/2015?",
+        tag: "Histórico • CPC/2015",
+        options: [
+          "A) No CPC/2015 a tutela antecipada antecedente foi criada como inovação, tramitando tudo nos mesmos autos (e não em processo cautelar autônomo separado).",
+          "B) No CPC/2015 é obrigatório abrir dois processos distintos com dois números diferentes.",
+          "C) O CPC/2015 proibiu qualquer pedido de urgência antes do pedido principal.",
+          "D) Não houve nenhuma alteração entre os dois códigos.",
+          "E) O CPC/2015 extinguiu o agravo de instrumento."
+        ],
+        correct: 0,
+        comment: "A tutela antecipada antecedente com possibilidade de estabilização (arts. 303 e 304) foi uma inovação do CPC/2015, unificando a tramitação em um único processo (mesmos autos)."
+      },
+      {
+        q: "44. Na aula, o exemplo do motorista de aplicativo descredenciado da Uber (TJSP, fev./2025) ilustra:",
+        tag: "Caso Prático • Aula 03:50",
+        options: [
+          "A) Tutela da evidência por abuso de defesa.",
+          "B) Tutela provisória de urgência antecipada em caráter antecedente, na qual o autor pediu apenas o recadastramento imediato por depender do aplicativo para sua subsistência, podendo aditar depois para pedir danos morais.",
+          "C) Arresto cautelar de bens imóveis.",
+          "D) Ação rescisória perante o STF.",
+          "E) Cumprimento de sentença arbitral."
+        ],
+        correct: 1,
+        comment: "Exemplo real citado pelo professor às 03:50 para demonstrar a utilidade prática do art. 303 do CPC quando a urgência é contemporânea à propositura da ação."
+      },
+      {
+        q: "45. Na analogia feita pelo STJ com o art. 701 do CPC (ação monitória) para fixar honorários de 5% na estabilização da tutela antecipada, qual é a razão de política judiciária subjacente?",
+        tag: "STJ • Honorários 5% (Aula 18:29)",
+        options: [
+          "A) Punir o advogado do autor por não ter feito petição longa.",
+          "B) Premiar a postura não litigiosa do réu que não recorre da decisão, reduzindo o percentual de sucumbência de 10%-20% (art. 85, § 2º) para 5% (art. 701), como estímulo à solução rápida do conflito.",
+          "C) Isentar totalmente o réu de qualquer verba sucumbencial.",
+          "D) Transferir os honorários para o escrivão da vara.",
+          "E) Aplicar a tabela da Justiça do Trabalho."
+        ],
+        correct: 1,
+        comment: "Assim como na monitória em que o réu cumpre sem embargar (art. 701), quando o réu não agrava e permite a estabilização rápida do art. 304, os honorários são reduzidos a 5% sobre o valor da causa."
+      },
+      {
+        q: "46. Se o processo for extinto pela estabilização da tutela antecipada (art. 304, § 1º) e passarem mais de 2 anos da ciência da decisão extintiva sem que o réu ajuíze a ação revisional do § 2º, o que ocorre?",
+        tag: "CPC • Art. 304, §§ 5º e 6º",
+        options: [
+          "A) A decisão passa a produzir efeitos estáveis definitivos na prática, pois decaiu o direito de propor a ação para revê-la, reformá-la ou invalidá-la (mantendo-se, tecnicamente, a distinção do § 6º quanto à ausência de coisa julgada).",
+          "B) A tutela perde a eficácia automaticamente no aniversário de 2 anos.",
+          "C) O réu ganha o direito automático de cobrar multa do autor.",
+          "D) O processo antigo é reaberto de ofício pelo juiz.",
+          "E) Cabe recurso de apelação após 2 anos."
+        ],
+        correct: 0,
+        comment: "O prazo de 2 anos do art. 304, § 5º é decadencial: escoado o biênio, extingue-se o direito de rever, reformar ou invalidar a tutela estabilizada, conservando ela seus efeitos (§ 3º)."
+      },
+      {
+        q: "47. Na hipótese de o juiz indeferir a tutela antecipada antecedente (art. 303, § 6º) e determinar a emenda da inicial em até 5 dias, o que acontece se o autor NÃO cumprir a determinação no prazo?",
+        tag: "CPC • Art. 303, § 6º",
+        options: [
+          "A) A inicial será indeferida e o processo será extinto sem resolução do mérito.",
+          "B) O processo prossegue normalmente até a sentença de mérito.",
+          "C) O juiz concede a tutela de ofício.",
+          "D) O réu é condenado à revelia.",
+          "E) O prazo renova-se automaticamente por 90 dias."
+        ],
+        correct: 0,
+        comment: "Art. 303, § 6º: '...o órgão jurisdicional determinará a emenda da petição inicial em até 5 (cinco) dias, sob pena de ser indeferida e de o processo ser extinto sem resolução de mérito.'"
+      },
+      {
+        q: "48. Conforme o art. 298 do CPC, ao conceder, negar, modificar ou revogar a tutela antecipada antecedente, o magistrado deve:",
+        tag: "CPC • Art. 298",
+        options: [
+          "A) Limitar-se a escrever 'Defiro' ou 'Indefiro' sem motivação.",
+          "B) Motivar seu convencimento de modo claro e preciso.",
+          "C) Consultar previamente o Tribunal de Justiça.",
+          "D) Fundamentar apenas se houver pedido do Ministério Público.",
+          "E) Proferir decisão oral sem redução a termo."
+        ],
+        correct: 1,
+        comment: "Art. 298 do CPC: 'Na decisão que conceder, negar, modificar ou revogar a tutela provisória, o juiz motivará seu convencimento de modo claro e preciso.'"
+      },
+      {
+        q: "49. Caso o autor formule pedido de tutela antecipada em caráter antecedente e obtenha a liminar, mas o processo principal dependa de prova pericial complexa no futuro, qual é a vantagem do rito do art. 303?",
+        tag: "Prática Forense • Art. 303",
+        options: [
+          "A) Permite obter imediatamente a proteção urgente com uma petição inicial enxuta (1 ou 2 páginas), deixando a complementação argumentativa e a juntada de novos documentos para o aditamento posterior (art. 303, § 1º, I).",
+          "B) Dispensa definitivamente a produção de provas caso o réu recorra.",
+          "C) Impede o réu de contratar advogado.",
+          "D) Transfere o processo para o Juizado Especial Criminal.",
+          "E) Elimina a necessidade de indicar o valor da causa."
+        ],
+        correct: 0,
+        comment: "O art. 303 permite atender a urgência imediata com petição simplificada, reservando a complementação da argumentação e juntada de novos documentos para a fase de aditamento (§ 1º, I)."
+      },
+      {
+        q: "50. Assinale a alternativa que reúne corretamente as teses do módulo sobre Tutela Antecipada Antecedente e Estabilização:",
+        tag: "Síntese Geral • Aula 02",
+        options: [
+          "A) A tutela antecipada antecedente (art. 303) exige urgência contemporânea à propositura da ação; concedida a liminar, o prazo do réu para recorrer e o do autor para aditar em 15 dias são sucessivos (STJ); a estabilização (art. 304) não gera coisa julgada nem admite rescisória (FPPC 33), cabendo ação revisional em 1º grau em 2 anos; e os honorários na estabilização são de 5% por analogia ao art. 701 do CPC.",
+          "B) A estabilização gera coisa julgada material imediata e exige ação rescisória no prazo de 5 anos.",
+          "C) O prazo de 15 dias do autor corre sempre antes da citação do réu, de forma concomitante.",
+          "D) Na estabilização da tutela antecipada, os honorários advocatícios são fixados em 20% sobre o salário mínimo.",
+          "E) Se a tutela antecipada antecedente for indeferida, o autor tem 30 dias para emendar a inicial."
+        ],
+        correct: 0,
+        comment: "A alternativa 'A' sintetiza com precisão todos os pilares normativos e jurisprudenciais da Aula 02 do Prof. Guilherme Hartmann."
+      }
+    ];
+
+    let answeredMap = {};
+
+    function updateScoreBoard() {
+      const keys = Object.keys(answeredMap);
+      const totalAnswered = keys.length;
+      const totalCorrect = keys.filter(k => answeredMap[k]).length;
+      const pct = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+      document.getElementById("score-display").textContent =
+        `Acertos: ${totalCorrect} / ${totalAnswered} respondidas (${pct}%) — Total: 50 questões`;
+    }
+
+    function renderQuestions() {
+      const container = document.getElementById("quiz-list");
+      container.innerHTML = "";
+
+      questionsData.forEach((item, index) => {
+        const card = document.createElement("div");
+        card.className = "question-card";
+        card.id = `q-${index}`;
+
+        const header = document.createElement("div");
+        header.className = "question-header";
+        header.innerHTML = `<span>Questão ${index + 1} de 50</span><span class="q-tag">${item.tag}</span>`;
+
+        const qText = document.createElement("div");
+        qText.className = "question-text";
+        qText.textContent = item.q;
+
+        const ul = document.createElement("ul");
+        ul.className = "options";
+
+        const ansBox = document.createElement("div");
+        ansBox.className = "answer-box";
+        ansBox.id = `ans-${index}`;
+        ansBox.innerHTML = `<strong>Gabarito Oficial:</strong> ${item.options[item.correct]}<br><br><strong>Fundamentação:</strong> ${item.comment}`;
+
+        const toggleBtn = document.createElement("button");
+        toggleBtn.className = "btn";
+        toggleBtn.style.padding = "0.35rem 0.8rem";
+        toggleBtn.style.fontSize = "0.825rem";
+        toggleBtn.textContent = "Ver Gabarito Comentado";
+
+        item.options.forEach((opt, optIdx) => {
+          const li = document.createElement("li");
+          li.textContent = opt;
+          li.onclick = () => {
+            const allOptions = ul.querySelectorAll("li");
+            allOptions.forEach(o => {
+              o.classList.remove("selected", "correct-opt", "wrong-opt");
+            });
+            if (optIdx === item.correct) {
+              li.classList.add("correct-opt");
+              answeredMap[index] = true;
+            } else {
+              li.classList.add("wrong-opt");
+              allOptions[item.correct].classList.add("correct-opt");
+              answeredMap[index] = false;
+            }
+            ansBox.classList.add("visible");
+            toggleBtn.textContent = "Ocultar Gabarito";
+            updateScoreBoard();
+          };
+          ul.appendChild(li);
+        });
+
+        toggleBtn.onclick = () => {
+          ansBox.classList.toggle("visible");
+          toggleBtn.textContent = ansBox.classList.contains("visible") ? "Ocultar Gabarito" : "Ver Gabarito Comentado";
+        };
+
+        card.appendChild(header);
+        card.appendChild(qText);
+        card.appendChild(ul);
+        card.appendChild(toggleBtn);
+        card.appendChild(ansBox);
+
+        container.appendChild(card);
+      });
+      updateScoreBoard();
+    }
+
+    function toggleAllAnswers() {
+      document.querySelectorAll(".answer-box").forEach(el => el.classList.add("visible"));
+      document.querySelectorAll(".question-card .btn").forEach(b => {
+        if (b.textContent.includes("Gabarito")) b.textContent = "Ocultar Gabarito";
+      });
+    }
+
+    function hideAllAnswers() {
+      document.querySelectorAll(".answer-box").forEach(el => el.classList.remove("visible"));
+      document.querySelectorAll(".question-card .btn").forEach(b => {
+        if (b.textContent.includes("Gabarito")) b.textContent = "Ver Gabarito Comentado";
+      });
+    }
+
+    function resetQuiz() {
+      answeredMap = {};
+      renderQuestions();
+    }
+
+    document.addEventListener("DOMContentLoaded", renderQuestions);
+  </script>
+</body>
+</html>
